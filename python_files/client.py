@@ -17,6 +17,18 @@ def send(msg):
     client.send(send_length)
     client.send(message)
 
-send("Hello")
+def run():
+    is_input = True
+    while is_input:
+        data = input("Type data. Type 'q' if you would like to exit.\n")
+        if data == 'q':
+            is_input = False
+        else:
+            send(data)
+    
+    send(DISCONNECT_MESSAGE)
+    client.close()
+    
+    return 0
 
-send(DISCONNECT_MESSAGE)
+run()
