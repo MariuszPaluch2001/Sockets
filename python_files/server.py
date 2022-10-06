@@ -1,14 +1,11 @@
 import socket
 import threading
+from config import HEADER, PORT, FORMAT, DISCONNECT_MESSAGE
 
-HEADER = 64
-PORT = 5050
 SERVER = socket.gethostbyname(
     socket.gethostname()
 )
 ADDR = (SERVER, PORT)
-FORMAT = 'utf-8'
-DISCONNECT_MESSAGE = "CLOSING_CONNECTION"
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)

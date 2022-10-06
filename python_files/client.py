@@ -1,9 +1,6 @@
 import socket
+from config import HEADER, PORT, FORMAT, DISCONNECT_MESSAGE
 
-HEADER = 64
-PORT = 5050
-FORMAT = 'utf-8'
-DISCONNECT_MESSAGE = "CLOSING_CONNECTION"
 SERVER = socket.gethostbyname(
     socket.gethostname()
 )
